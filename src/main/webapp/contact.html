@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+input[type=text], select, textarea{
+    width: 30%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit], input[type=button] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+}
+
+input[type=submit]:hover, input[type=button]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+</style>
+</head>
+<body>
+
+<h2>Contact Us</h2>
+<p>Wherever you are in the world, know that we’re only a call away. Contact us at anyone of our call centres with the contact details and numbers listed below.</p>
+<p>Contact us:- (+91) 8981514927</p>
+<p>Head-office:- 18, Dodda Banaswadi Main Road, Balaji Layout, Maruthi Sevanagar, Bengaluru, Karnataka 560005</p>
+<p>Send us a message and we'll respond as soon as possible </p>
+
+<div class="container">
+  <form action="first1.jsp" method="post">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+   
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Message</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <!-- <div class="row">
+      <input type="submit" value="Submit">
+    </div> -->
+    <div class="row">
+      <input type="button" value="Submit" onclick='temp()'>
+    </div>
+    
+  </form>
+  
+</div>
+
+<p id="temp" style="display: none">Submission succesfull</p>
+<a href=first1.jsp id="temp1" style="display: none">Click to go to HomePage</a>
+<script type="text/javascript">
+
+function temp()
+{
+	document.getElementById("temp").style.display="block";
+	document.getElementById("temp1").style.display="block";
+	
+	}
+
+
+</script>
+</body>
+</html>

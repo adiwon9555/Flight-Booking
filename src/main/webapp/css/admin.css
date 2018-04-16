@@ -1,0 +1,61 @@
+@CHARSET "ISO-8859-1";
+
+tr.noborder td
+{
+	
+	border: 10;
+}
+/* body
+{
+	background-image:url("pl.jpg");
+
+} */
+
+table,th,td
+{
+	
+	border: 1px solid black;
+   
+}
+
+th,td{
+	height:50px;
+	text-align:left;
+	padding:5px;
+}
+
+ tr:hover{
+ background-color:lightblue;
+ }
+th{
+	background-color:black;
+	color:white;
+	height:20px;
+}
+
+
+.button, .edit_button, .update_button, .cancel_button{
+  
+    border: none;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button:hover, .edit_button:hover, .update_button:hover, .cancel_button:hover,.add_airport:hover,.add_customer:hover,.add_flight:hover,.add_booking:hover
+{
+	background-color:white;
+	color: red;
+}
+
+
+.button, .edit_button, .update_button, .cancel_button{border-radius: 30%;}
+#flight_reg, #airport_reg, #customer_reg, #booking_reg
+{
+	display: none;
+}
